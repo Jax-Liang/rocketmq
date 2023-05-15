@@ -18,6 +18,7 @@ package org.apache.rocketmq.common.utils;
 
 import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
+import java.util.Date;
 
 public class DataConverter {
     public static Charset charset = Charset.forName("UTF-8");
@@ -34,6 +35,10 @@ public class DataConverter {
         } else {
             return (int) (value & ~(1L << index));
         }
+    }
+
+    public static String Date2Str(Date date) {
+        return "";
     }
 
     public static boolean getBit(int value, int index) {
